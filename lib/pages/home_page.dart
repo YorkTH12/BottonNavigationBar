@@ -12,6 +12,7 @@ class HomePage extends StatelessWidget {
         child: Column(children: [
           ElevatedButton(onPressed: () => Get.toNamed("/aboutMe"), child: Text("AboutMe")),
           ElevatedButton(onPressed: () => Get.toNamed("/aboutGF"), child: Text("AboutGF")),
+          ElevatedButton(onPressed: () => Get.toNamed("/courses"), child: Text("Courses")),
         ]),
       ),
       );
