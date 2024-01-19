@@ -1,3 +1,4 @@
+import 'package:button_navigation_bar/bottomnavigationbar.dart';
 import 'package:flutter/material.dart';
 
 class AboutGFPage extends StatelessWidget {
@@ -19,6 +20,12 @@ class AboutGFPage extends StatelessWidget {
     ),
   ),
 ),
+      bottomNavigationBar: MyBottomNavigationBar(
+        currentIndex: 0,
+        onTap: (index) {
+
+        },
+      ),
     );
   }
 }

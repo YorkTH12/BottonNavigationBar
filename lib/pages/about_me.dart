@@ -1,3 +1,4 @@
+import 'package:button_navigation_bar/bottomnavigationbar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -16,12 +17,14 @@ class AboutMePage extends StatelessWidget {
             Text("6 September 2003"),
             Text("Age 20"),
             Image.asset('lib/assets/images/Me.jpg'),
-            ElevatedButton(
-              onPressed: () => Get.back(),
-              child: Text("Back"),
-            )
           ],
         )),
+      ),
+      bottomNavigationBar: MyBottomNavigationBar(
+        currentIndex: 0,
+        onTap: (index) {
+
+        },
       ),
     );
   }

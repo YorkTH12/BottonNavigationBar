@@ -17,10 +17,10 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       initialRoute: '/home',
       getPages: [
-        GetPage(name: "/home", page: () => const HomePage(), transition: Transition.zoom,),
-        GetPage(name: "/aboutMe", page: () => const AboutMePage(), transition: Transition.fade),
-        GetPage(name: "/aboutGF", page: () => const AboutGFPage(), transition: Transition.leftToRight),
-        GetPage(name: "/courses", page: () => CoursePage(), transition: Transition.downToUp),
+        GetPage(name: "/home", page: () =>  HomePage(), ),
+        GetPage(name: "/aboutMe", page: () =>  AboutMePage()),
+        GetPage(name: "/aboutGF", page: () =>  AboutGFPage()),
+        GetPage(name: "/courses", page: () => CoursePage()),
       ],
     );
   }

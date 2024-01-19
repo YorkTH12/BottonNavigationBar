@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:button_navigation_bar/bottomnavigationbar.dart';
 import 'package:button_navigation_bar/course.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -42,28 +43,26 @@ class _CoursePageState extends State<CoursePage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Courses")),
-      body: ListView.separated(
-        separatorBuilder: (context, index) => const Divider(),
-        itemCount: courses.length,
-        itemBuilder: (context, index) => ListTile(
-          title: Text(courses[index].title),
-          subtitle: Text(courses[index].detail),
-          leading: ConstrainedBox(
-            constraints: const BoxConstraints(
-                maxHeight: 80, minHeight: 80, maxWidth: 80, minWidth: 80
-            ),
-            child: Image.network(
-              courses[index].picture,
-              fit: BoxFit.fill,
+        appBar: AppBar(title: Text("Courses")),
+        body: ListView.separated(
+          separatorBuilder: (context, index) => const Divider(),
+          itemCount: courses.length,
+          itemBuilder: (context, index) => ListTile(
+            title: Text(courses[index].title),
+            subtitle: Text(courses[index].detail),
+            leading: ConstrainedBox(
+              constraints: const BoxConstraints(
+                  maxHeight: 80, minHeight: 80, maxWidth: 80, minWidth: 80),
+              child: Image.network(
+                courses[index].picture,
+                fit: BoxFit.fill,
+              ),
             ),
           ),
-          // onTap: (){
-          //   int id = courses[index].id;
-          //   Get.toNamed("detail/$id");
-          // },
         ),
-      ),
-    );
+        bottomNavigationBar: MyBottomNavigationBar(
+          currentIndex: 0,
+          onTap: (index) {},
+        ));
   }
 }
